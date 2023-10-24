@@ -89,4 +89,5 @@ button:hover{
     color: azure;
     font-weight: bold;
     animation: neonGlow 1s infinite alternate;
+    padding: 10px;
 }
