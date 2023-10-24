@@ -1,6 +1,6 @@
 function checkVowels(){
   let text = document.getElementById("inputText").value;
-  let vowel = 0, consonant = 0, splChar = 0;
+  let vowel = 0, consonant = 0, splChar = 0, number = 0;
   text = text.toLowerCase();
 
   for(let i = 0; i < text.length; i++){
@@ -13,6 +13,9 @@ function checkVowels(){
         consonant++;
       }
     }
+    else if(char >= '0' && char <= '9'){
+        number++;
+    }
     else{
       if(char != ' ')
         splChar++;
@@ -23,7 +26,7 @@ function checkVowels(){
 
   const lineBreak = document.createElement("br");
   result.appendChild(lineBreak);
-  result.innerHTML = `Total Vowels : ${vowel}<br>Total Consonants : ${consonant} <br>Total Special Characters : ${splChar}`;
+  result.innerHTML = `Total Vowels : ${vowel}<br>Total Consonants : ${consonant} <br>Total Numbers : ${number}<br>Total Special Characters : ${splChar}`;
 }
 
 function isVowel(char){
